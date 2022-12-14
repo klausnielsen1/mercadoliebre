@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
 const path=require('path');
-
-let PORT = 3000;
 app.use(express.static("public"))
+
+let PORT = process.ev.PORT || 3000;
 app.listen(PORT,()=>console.log("servidor funcionando"))
 
 app.get('/',(req,res)=>{
